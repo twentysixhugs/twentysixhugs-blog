@@ -1,7 +1,7 @@
 import { ArticleEntryProps } from "./types";
 import * as Styles from "./styles";
 import { Typography } from "@mui/material";
-import { ARTICLE_ROUTES, routes, theme } from "@app";
+import { ARTICLE_ROUTES, routes, theme } from "src/appConfig";
 import Link from "next/link";
 import { getEllipsisStyles } from "@shared";
 

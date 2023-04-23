@@ -23,11 +23,16 @@
       "@ui": ["./src/ui"],
       "@containers": ["./src/containers"],
       "@shared": ["./src/shared"],
-      "@context": ["./src/pages/context"],
-      "@app": ["./src/app"],
+      "@context": ["./src/appConfig/context"],
+      "@app": ["src/appConfig"],
       "src/*": ["./src/*"]
-    }
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
