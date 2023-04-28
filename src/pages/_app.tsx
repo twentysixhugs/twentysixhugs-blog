@@ -1,11 +1,11 @@
 import type { AppProps } from "next/app";
 import "src/global.css";
-import { Layout } from "@containers";
 import { ThemeProvider } from "@mui/material";
-import { theme } from "@app";
+import { theme } from "src/appConfig";
 import CssBaseline from "@mui/material/CssBaseline";
 import { useState } from "react";
-import { DynamicThemeContext } from "@context";
+import { DynamicThemeContext } from "src/appConfig/context";
+import "highlight.js/styles/github-dark.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [themeState, setThemeState] = useState(() => theme);
@@ -14,9 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <DynamicThemeContext.Provider value={{ updateTheme: setThemeState }}>
       <ThemeProvider theme={themeState}>
         <CssBaseline />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
       </ThemeProvider>
     </DynamicThemeContext.Provider>
   );

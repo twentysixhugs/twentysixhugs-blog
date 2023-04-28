@@ -1,5 +1,5 @@
 import { Box, styled } from "@mui/material";
-import { theme } from "@app";
+import { theme } from "src/appConfig";
 
 export const MainContainer = styled(Box)({
   position: "sticky",

@@ -1,18 +1,10 @@
 import { Box, Tooltip, Typography, useTheme } from "@mui/material";
 import * as Styles from "./styles";
 import Link from "next/link";
-import { ARTICLE_ROUTES, MAIN_ROUTES, routes } from "@app";
-import TranslateIcon from "@mui/icons-material/Translate";
-import { IconDropdownMenu } from "@components";
-import { languages } from "./constants";
+import { ARTICLE_ROUTES, MAIN_ROUTES, routes } from "src/appConfig";
 
 export const Header = () => {
   const { colors } = useTheme();
-
-  const handleLanguageSubmit = (value: string) => {
-    console.log(value);
-    // TODO
-  };
 
   return (
     <Styles.MainContainer>
@@ -51,16 +43,8 @@ export const Header = () => {
           Newsletter ✉️
         </Typography>
       </Tooltip>
-      <Box ml="auto">
-        <IconDropdownMenu
-          menuItems={languages}
-          onSubmit={handleLanguageSubmit}
-          icon={<TranslateIcon sx={{ color: colors.text.primary }} />}
-          direction="horizontal"
-        />
-      </Box>
 
-      <Box ml="20px">
+      <Box ml="auto">
         <Link href={routes[MAIN_ROUTES.ABOUT].makePath()}>
           <Typography
             className="link"

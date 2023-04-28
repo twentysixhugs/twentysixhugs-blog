@@ -22,7 +22,7 @@ const articleRoutes = {
     makePath: () => "/articles",
   },
   [ARTICLE_ROUTES.ARTICLE]: {
-    makePath: ({ id }: { id: number }) => `/articles/${id}`,
+    makePath: ({ slug }: { slug: string }) => `/articles/${slug}`,
   },
 };
 

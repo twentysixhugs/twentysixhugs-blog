@@ -1,7 +1,7 @@
 import { Typography, useMediaQuery } from "@mui/material";
 import TypewriterComponent from "typewriter-effect";
 import * as Styles from "./styles";
-import { theme } from "@app";
+import { theme } from "src/appConfig";
 import {
   INTRODUCTION_DESCRIPTION,
   INTRODUCTION_HEADING,
@@ -23,6 +23,7 @@ export const Introduction = () => {
           marginBottom: "20px",
           ...(isLowerThan1800 && { minHeight: "130px", marginBottom: 0 }),
           width: "100%",
+          opacity: 0.9,
           "& *": {
             width: "100%",
             wordBreak: "break-word",

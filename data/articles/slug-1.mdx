@@ -1,0 +1,84 @@
+---
+title: "What I do on the job as a frontend developer, and how to learn web development for free from scratch"
+publishedAt: "2022-04-16"
+description: "Next.js hasf a built-in Image component that comes with a lot of performance optimization features when you are using it."
+image: "https://i.imgur.com/Ndn0K5U.jpg"
+featured: true
+---
+
+Hello, and welcome to my first blog post! I'm excited to start sharing my thoughts and experiences with you all. In this post, I want to talk about my journey into web development. It's been a challenging but rewarding experience, and I hope that my story can inspire others who are just starting out. I first became interested in web development a few years ago when I was working on a personal project. I wanted to build a simple website to showcase my work, but I had no idea where to start.
+
+I began by reading articles and tutorials online, and eventually stumbled upon a course that taught me the basics of HTML, CSS, and JavaScript. I was hooked!
+
+Of course, learning to code is never easy. There were many times when I felt frustrated and discouraged, and I even considered giving up. But I kept at it, and with each passing day, I felt myself getting a little bit better. I started building more complex projects and contributing to open source projects.
+
+## My obsession with hugs
+
+Hello, and welcome to my first blog post! I'm excited to start sharing my thoughts and experiences with you all. In this post, I want to talk about my journey into web development. It's been a challenging but rewarding experience, and I hope that my story can inspire others who are just starting out. I first became interested in web development a few years ago when I was working on a personal project. I wanted to build a simple website to showcase my work, but I had no idea where to start.
+
+I began by reading articles and tutorials online, and eventually stumbled upon a course that taught me the basics of HTML, CSS, and JavaScript. I was hooked!
+
+Of course, learning to code is never easy. There were many times when I felt frustrated and discouraged, and I even considered giving up. But I kept at it, and with each passing day, I felt myself getting a little bit better. I started building more complex projects and contributing to open source projects.
+
+Hello, and welcome to my first blog post! I'm excited to start sharing my thoughts and experiences with you all. In this post, I want to talk about my journey into web development. It's been a challenging but rewarding experience, and I hope that my story can inspire others who are just starting out. I first became interested in web development a few years ago when I was working on a personal project. I wanted to build a simple website to showcase my work, but I had no idea where to start.
+
+I began by reading articles and tutorials online, and eventually stumbled upon a course that taught me the basics of HTML, CSS, and JavaScript. I was hooked!
+
+Of course, learning to code is never easy. There were many times when I felt frustrated and discouraged, and I even considered giving up. But I kept at it, and with each passing day, I felt myself getting a little bit better. I started building more complex projects and contributing to open source projects.
+
+Hello, and welcome to my first blog post! I'm excited to start sharing my thoughts and experiences with you all. In this post, I want to talk about my journey into web development. It's been a challenging but rewarding experience, and I hope that my story can inspire others who are just starting out. I first became interested in web development a few years ago when I was working on a personal project. I wanted to build a simple website to showcase my work, but I had no idea where to start.
+
+I began by reading articles and tutorials online, and eventually stumbled upon a course that taught me the basics of HTML, CSS, and JavaScript. I was hooked!
+
+Of course, learning to code is never easy. There were many times when I felt frustrated and discouraged, and I even considered giving up. But I kept at it, and with each passing day, I felt myself getting a little bit better. I started building more complex projects and contributing to open source projects.
+
+## What's Next?
+
+Now that I've gained some experience in web development, I'm excited to see where this journey takes me. I've already learned so much, but I know that there's still so much more to learn.
+
+In future blog posts, I plan to share some of the projects I'm working on, as well as some tips and tricks for learning to code.
+
+![Картиночка](https://i.imgur.com/Ndn0K5U.jpg "Picture, lol")
+
+## Here's the code which renders the code
+
+```tsx
+const components = {
+  // Define a custom component for rendering code blocks
+  code: ({
+    className,
+    children,
+  }: {
+    className?: string;
+    children?: ReactNode;
+  }) => {
+    // Extract the language from the class name (e.g. "language-jsx" -> "jsx")
+    const language = className?.replace("language-", "") || "javascript";
+
+    // Use ReactDOMServer to convert the React children to an HTML string
+    const codeHtml = ReactDOMServer.renderToString(
+      <div style={{ fontSize: "16px" }}>{children}</div>
+    );
+
+    //eslint-disable-next-line
+    const ref = useRef<HTMLElement | null>(null);
+
+    //eslint-disable-next-line
+    useLayoutEffect(() => {
+      if (!ref.current) return;
+
+      ref.current.innerHTML = `${codeHtml}`;
+    }, [ref.current]);
+
+    return (
+      <pre>
+        <code
+          style={{ borderRadius: "12px", background: "#13111c" }}
+          ref={ref}
+          className={`hljs ${language}`}
+        ></code>
+      </pre>
+    );
+  },
+};
+```

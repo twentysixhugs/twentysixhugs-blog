@@ -2,12 +2,13 @@ import { Header } from "@components";
 import * as Styles from "./styles";
 import { LayoutProps } from "./types";
 
-export const Layout = ({ children }: LayoutProps) => {
+export const Layout = ({ children, sx, innerContainerSx }: LayoutProps) => {
   return (
-    <Styles.MainContainer>
+    <Styles.MainContainer sx={sx}>
       <Header />
-
-      <Styles.InnerContainer>{children}</Styles.InnerContainer>
+      <Styles.InnerContainer sx={innerContainerSx}>
+        {children}
+      </Styles.InnerContainer>
     </Styles.MainContainer>
   );
 };

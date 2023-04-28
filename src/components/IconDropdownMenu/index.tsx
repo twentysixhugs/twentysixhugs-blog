@@ -4,9 +4,9 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { IconDropdownMenuProps } from "./types";
 import { Box, useTheme } from "@mui/material";
-import { useDynamicThemeContext } from "@context";
+import { useDynamicThemeContext } from "src/appConfig/context";
 import { produce } from "immer";
-import { theme as defaultTheme } from "@app";
+import { theme as defaultTheme } from "src/appConfig";
 
 export const IconDropdownMenu = ({
   icon,

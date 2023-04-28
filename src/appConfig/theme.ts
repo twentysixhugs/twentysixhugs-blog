@@ -12,8 +12,8 @@ export const theme = createTheme({
   },
   colors: {
     background: {
-      first: "#231e2e",
-      second: "#352d45",
+      first: "#13111a",
+      second: "#211c2b",
       third: "#4a3f61",
     },
     text: {
@@ -29,8 +29,8 @@ export const theme = createTheme({
       lg: "200px",
     },
     margin: {
-      listHeading: "25px",
-      top: "40px",
+      listHeading: "30px",
+      top: "60px",
     },
   },
   typography: {
@@ -40,6 +40,21 @@ export const theme = createTheme({
       fontFamily: "'Open Sans', sans-serif",
     },
     h2: {
+      fontSize: "24px",
+      fontWeight: 600,
+      fontFamily: "'Open Sans', sans-serif",
+    },
+    h3: {
+      fontSize: "22px",
+      fontWeight: 600,
+      fontFamily: "'Open Sans', sans-serif",
+    },
+    h4: {
+      fontSize: "20px",
+      fontWeight: 600,
+      fontFamily: "'Open Sans', sans-serif",
+    },
+    h5: {
       fontSize: "18px",
       fontWeight: 600,
       fontFamily: "'Open Sans', sans-serif",
@@ -55,7 +70,7 @@ export const theme = createTheme({
       fontFamily: "'Open Sans', sans-serif",
     },
     subtitle1: {
-      fontSize: "16px",
+      fontSize: "18px",
       fontWeight: 500,
       fontFamily: "'Open Sans', sans-serif",
     },
@@ -74,8 +89,7 @@ export const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: () => ({
         "::-webkit-scrollbar": {
-          width: "0px",
-          height: "0px",
+          width: "10px",
         },
         "::-webkit-scrollbar-track": {
           backgroundColor: "#2c2539",

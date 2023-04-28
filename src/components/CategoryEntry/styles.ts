@@ -1,4 +1,4 @@
-import { theme } from "@app";
+import { theme } from "src/appConfig";
 import { Box, styled } from "@mui/material";
 
 export const MainContainer = styled(Box)({

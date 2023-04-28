@@ -1,7 +1,7 @@
 import { CategoryEntry } from "@components";
 import * as Styles from "./styles";
 import { Box, Typography } from "@mui/material";
-import { theme } from "@app";
+import { theme } from "src/appConfig";
 
 const categories = [
   { name: "react", displayName: "React" },

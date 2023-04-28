@@ -1,9 +1,10 @@
 import { ArticleList } from "@components";
 import * as Styles from "./styles";
 import { Typography } from "@mui/material";
-import { theme } from "@app";
+import { theme } from "src/appConfig";
+import { ArticleListItem } from "@shared";
 
-export const HomeArticles = () => {
+export const HomeArticles = ({ articles }: { articles: ArticleListItem[] }) => {
   return (
     <Styles.MainContainer>
       <Typography
@@ -16,7 +17,7 @@ export const HomeArticles = () => {
       >
         Featured articles
       </Typography>
-      <ArticleList />
+      <ArticleList articles={articles} />
     </Styles.MainContainer>
   );
 };

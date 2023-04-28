@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import * as Styles from "./styles";
 import { useRouter } from "next/router";
 import { CategoryEntryProps } from "./types";
-import { theme } from "@app";
+import { theme } from "src/appConfig";
 
 export const CategoryEntry = ({ name, displayName }: CategoryEntryProps) => {
   const router = useRouter();

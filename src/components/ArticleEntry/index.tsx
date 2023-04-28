@@ -7,17 +7,15 @@ import { getEllipsisStyles } from "@shared";
 
 export const ArticleEntry = ({
   description,
-  image,
   title,
-  id,
+  slug,
 }: ArticleEntryProps) => {
   return (
     <Styles.MainContainer>
-      <Styles.StyledImage width={130} height={130} src={image} alt={""} />
       <Styles.DataContainer>
         <Link
-          style={{ textDecoration: "none" }}
-          href={routes[ARTICLE_ROUTES.ARTICLE].makePath({ id })}
+          style={{ textDecoration: "none", width: "90%" }}
+          href={routes[ARTICLE_ROUTES.ARTICLE].makePath({ slug })}
         >
           {" "}
           <Typography
@@ -25,6 +23,7 @@ export const ArticleEntry = ({
               "&:hover": { textDecoration: "underline" },
               lineHeight: "1.3",
               ...getEllipsisStyles(description, 2),
+              width: "90%",
             }}
             variant="body1"
             color={theme.colors.text.heading}

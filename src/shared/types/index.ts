@@ -1,4 +1,1 @@
-export enum LANGUAGE {
-  RU = "RU",
-  EN = "EN",
-}
+export * from "./article";
