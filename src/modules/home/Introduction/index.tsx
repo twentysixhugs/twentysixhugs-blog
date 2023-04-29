@@ -32,6 +32,12 @@ export const Introduction = () => {
     return theme.page.margin.top;
   };
 
+  const getLineHeight = () => {
+    if (isXs || isSm) return "2rem";
+
+    return "3.4rem";
+  };
+
   return (
     <Styles.Introduction>
       <Styles.Title
@@ -40,7 +46,7 @@ export const Introduction = () => {
         id="home-typewriter-message"
         mt={getPageMt()}
         fontSize={"50px"}
-        lineHeight="2rem"
+        lineHeight={getLineHeight()}
         fontWeight={600}
         sx={{
           ...(isLowerThan1800 && { minHeight: "130px", marginBottom: 0 }),
