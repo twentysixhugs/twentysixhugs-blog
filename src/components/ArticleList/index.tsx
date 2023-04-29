@@ -1,8 +1,10 @@
-import { ArticleEntry } from "@components";
-import * as Styles from "./styles";
 import { Divider } from "@mui/material";
-import { ArticleListProps } from "./types";
+
+import { ArticleEntry } from "@components";
 import { theme } from "@app";
+
+import * as Styles from "./styles";
+import { ArticleListProps } from "./types";
 
 export const ArticleList = ({ articles }: ArticleListProps) => {
   return (
@@ -14,12 +16,14 @@ export const ArticleList = ({ articles }: ArticleListProps) => {
               sx={{ borderColor: theme.colors.text.description, opacity: 0.2 }}
             />
           )}
-          <ArticleEntry
-            slug={slug}
-            key={slug}
-            title={title}
-            description={description}
-          />
+          <Styles.Li>
+            <ArticleEntry
+              slug={slug}
+              key={slug}
+              title={title}
+              description={description}
+            />
+          </Styles.Li>
         </>
       ))}
     </Styles.MainContainer>

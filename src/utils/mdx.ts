@@ -2,6 +2,7 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 import readingTime from "reading-time";
+
 import { ArticleListItem, ArticleMdxData } from "@shared";
 
 const articlesPath = path.join(process.cwd(), "data/articles");
@@ -28,6 +29,7 @@ export async function getArticleFromSlug(slug: string): Promise<{
       title: data.title,
       publishedAt: data.publishedAt,
       readingTime: readingTime(content).text,
+      category: data.category,
       ...data,
     } as ArticleMdxData,
   };

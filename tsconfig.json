@@ -20,7 +20,6 @@
       "@views/*": ["./src/views/*"],
       "@modules": ["./src/modules"],
       "@components": ["src/components"],
-      "@ui": ["./src/ui"],
       "@containers": ["./src/containers"],
       "@shared": ["./src/shared"],
       "@context": ["src/appConfig/context"],

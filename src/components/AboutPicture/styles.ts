@@ -1,6 +1,7 @@
 import { styled } from "@mui/material";
-import Image from "next/image";
 import { keyframes } from "@emotion/react";
+
+import { theme } from "@app";
 
 const slide = keyframes`
   from {
@@ -13,10 +14,27 @@ const slide = keyframes`
   }
 `;
 
-export const Avatar = styled(Image)({
+const appearMobile = keyframes`
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+export const Avatar = styled("img")({
   position: "relative",
   borderRadius: "100%",
   objectFit: "cover",
   animation: `${slide} 1s ease-out both`,
   animationDelay: "0.7s",
+  width: "400px",
+  height: "400px",
+  [theme.breakpoints.down("sm")]: {
+    width: "150px",
+    height: "150px",
+    animation: `${appearMobile} 1s ease-out both`,
+    animationDelay: "0.6s",
+  },
 });

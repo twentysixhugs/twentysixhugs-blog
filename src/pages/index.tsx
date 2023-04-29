@@ -1,21 +1,15 @@
-import { ArticleListItem } from "@shared";
+import Head from "next/head";
+
+import { ArticleListItem, sortArticles } from "@shared";
 import { getFeaturedArticles } from "@utils";
 import { HomeView } from "@views/home";
-import Head from "next/head";
 
 export async function getStaticProps() {
   const articles = await getFeaturedArticles();
 
-  articles.sort((a, b) => {
-    if (a.publishedAt > b.publishedAt) return 1;
-    if (a.publishedAt < b.publishedAt) return -1;
-
-    return 0;
-  });
-
   return {
     props: {
-      articles: [...articles].reverse(),
+      articles: sortArticles(articles),
     },
   };
 }
@@ -24,6 +18,20 @@ const Home = ({ articles }: { articles: ArticleListItem[] }) => {
     <>
       <Head>
         <title>Twenty Six Hugs | Web Development Blog</title>
+        <meta
+          name="description"
+          content="A blog for developers. Write about web development, lifelong learning and growth"
+        />
+        <meta
+          property="og:title"
+          content={`Twenty Six Hugs - Web Development Blog`}
+        />
+        <meta
+          property="og:description"
+          content="A blog for developers. Write about software development, lifelong learning and growth"
+        />
+        <meta property="og:url" content={`https://twentysixhugs.dev`} />
+        <meta property="og:type" content="website" />
       </Head>
       <HomeView articles={articles} />
     </>

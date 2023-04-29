@@ -1,10 +1,12 @@
 import type { AppProps } from "next/app";
 import "src/global.css";
 import { ThemeProvider } from "@mui/material";
-import { theme } from "src/appConfig";
 import CssBaseline from "@mui/material/CssBaseline";
 import { useState } from "react";
+
+import { theme } from "src/appConfig";
 import { DynamicThemeContext } from "src/appConfig/context";
+
 import "highlight.js/styles/github-dark.css";
 
 export default function App({ Component, pageProps }: AppProps) {

@@ -1,6 +1,6 @@
 import { Box, styled } from "@mui/material";
 
-export const MainContainer = styled(Box)({
+export const MainContainer = styled("article")({
   display: "flex",
   borderRadius: "16px",
   gap: "20px",

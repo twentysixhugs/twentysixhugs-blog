@@ -1,7 +1,6 @@
-import { theme } from "@app";
 import { Box, styled } from "@mui/material";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import DoneIcon from "@mui/icons-material/Done";
+
+import { theme } from "@app";
 
 export const MainContainer = styled(Box)({
   display: "flex",
@@ -29,30 +28,29 @@ export const Content = styled(Box)({
     fontSize: theme.typography.subtitle1.fontSize,
     lineHeight: "2.2rem",
     opacity: 0.9,
+
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16px",
+      lineHeight: "1.6rem",
+    },
   },
   color: "#e8e6e3",
-});
-
-export const CodeWrapper = styled(Box)({
-  position: "relative",
-});
-
-export const ClipboardIcon = styled(ContentCopyIcon)({
-  color: theme.colors.text.description,
-  opacity: 0.7,
-});
-
-export const CopyDoneIcon = styled(DoneIcon)({
-  color: theme.colors.text.description,
-  opacity: 0.7,
-});
-
-export const Copy = styled(Box)({
-  position: "absolute",
-  top: "27px",
-  right: "27px",
-  display: "flex",
-  gap: "8px",
-  cursor: "pointer",
-  alignItems: "center",
+  img: {
+    maxWidth: `calc(100vw - ${theme.page.padding.lg} - ${theme.page.padding.lg})`,
+  },
+  [theme.breakpoints.between("sm", "md")]: {
+    img: {
+      maxWidth: `calc(100vw - ${theme.page.padding.md} - ${theme.page.padding.md})`,
+    },
+  },
+  [theme.breakpoints.between("xs", "sm")]: {
+    img: {
+      maxWidth: `calc(100vw - ${theme.page.padding.sm} - ${theme.page.padding.sm})`,
+    },
+  },
+  [theme.breakpoints.down("xs")]: {
+    img: {
+      maxWidth: `calc(100vw - ${theme.page.padding.sm} - ${theme.page.padding.sm})`,
+    },
+  },
 });

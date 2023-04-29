@@ -1,27 +1,51 @@
 import { Typography } from "@mui/material";
-import * as Styles from "./styles";
-import { useRouter } from "next/router";
-import { CategoryEntryProps } from "./types";
+import { useState } from "react";
+
 import { theme } from "src/appConfig";
+import { useBreakpoints } from "@shared";
 
-export const CategoryEntry = ({ name, displayName }: CategoryEntryProps) => {
-  const router = useRouter();
+import * as Styles from "./styles";
+import { CategoryEntryProps } from "./types";
 
-  const handleClick = () => {
-    router.query.category = name;
-    router.push(router);
+
+export const CategoryEntry = ({
+  displayName,
+  name,
+  onClick,
+}: CategoryEntryProps) => {
+  const { isXs, isSm } = useBreakpoints();
+
+  const [selected, setSelected] = useState(false);
+
+  const handleSelect = () => {
+    setSelected(!selected);
+    onClick(name, !selected);
+  };
+
+  const getVariant = () => {
+    if (isXs || isSm) {
+      return "caption";
+    }
+
+    return "subtitle2";
   };
 
   return (
-    <Styles.MainContainer onClick={handleClick}>
+    <Styles.MainContainer
+      onClick={handleSelect}
+      sx={{
+        ...(selected && { background: theme.colors.background.third }),
+      }}
+    >
       <Typography
-        variant="subtitle2"
+        variant={getVariant()}
         color={theme.colors.text.primary}
         sx={{
           "&:hover": {
             color: theme.colors.text.pageHeading,
             opacity: 0.9,
           },
+          ...(selected && { color: theme.colors.text.pageHeading }),
         }}
       >
         {displayName}

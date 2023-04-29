@@ -1,15 +1,51 @@
-import { ArticleEntryProps } from "./types";
-import * as Styles from "./styles";
 import { Typography } from "@mui/material";
-import { ARTICLE_ROUTES, routes, theme } from "src/appConfig";
 import Link from "next/link";
-import { getEllipsisStyles } from "@shared";
+
+import { ARTICLE_ROUTES, routes, theme } from "src/appConfig";
+import { getEllipsisStyles, useBreakpoints } from "@shared";
+
+import * as Styles from "./styles";
+import { ArticleEntryProps } from "./types";
 
 export const ArticleEntry = ({
   description,
   title,
   slug,
 }: ArticleEntryProps) => {
+  const { isXs, isSm } = useBreakpoints();
+
+  const getTitleVariant = () => {
+    if (isXs || isSm) {
+      return "subtitle1";
+    }
+
+    return "body1";
+  };
+
+  const getDescriptionVariant = () => {
+    if (isXs || isSm) {
+      return "subtitle2";
+    }
+
+    return "subtitle1";
+  };
+
+  const getTitleEllipsis = () => {
+    if (isXs || isSm) {
+      return getEllipsisStyles(title, 5);
+    }
+
+    return getEllipsisStyles(title, 2);
+  };
+
+  const getDescriptionEllipsis = () => {
+    if (isXs || isSm) {
+      return getEllipsisStyles(description, 5);
+    }
+
+    return getEllipsisStyles(description, 2);
+  };
+
   return (
     <Styles.MainContainer>
       <Styles.DataContainer>
@@ -22,22 +58,23 @@ export const ArticleEntry = ({
             sx={{
               "&:hover": { textDecoration: "underline" },
               lineHeight: "1.3",
-              ...getEllipsisStyles(description, 2),
+              ...getTitleEllipsis(),
               width: "90%",
             }}
-            variant="body1"
+            variant={getTitleVariant()}
             color={theme.colors.text.heading}
-            component="h3"
+            component="h2"
           >
             {title}
           </Typography>
         </Link>
 
         <Typography
-          variant="subtitle1"
+          variant={getDescriptionVariant()}
           color={theme.colors.text.description}
           mt="4px"
-          sx={{ ...getEllipsisStyles(description, 2) }}
+          component="p"
+          sx={{ ...getDescriptionEllipsis() }}
         >
           {description}
         </Typography>

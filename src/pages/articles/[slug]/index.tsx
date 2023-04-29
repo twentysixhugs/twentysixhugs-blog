@@ -1,11 +1,12 @@
-import { getArticleFromSlug, getSlug } from "@utils";
 import { serialize } from "next-mdx-remote/serialize";
 import rehypeAutolinkHeadings from "rehype-autolink-headings/lib";
 import rehypeCodeTitles from "rehype-code-titles";
 import rehypeHighlight from "rehype-highlight/lib";
 import rehypeSlug from "rehype-slug";
-import { RenderArticleMeta } from "@shared";
 import Head from "next/head";
+
+import { RenderArticleMeta } from "@shared";
+import { getArticleFromSlug, getSlug } from "@utils";
 import { ArticleView } from "@views/article/view";
 
 export async function getStaticPaths() {
@@ -51,6 +52,23 @@ const ArticlePage = ({ source, frontmatter }: RenderArticleMeta) => {
     <>
       <Head>
         <title>{`${frontmatter?.title} | Twenty Six Hugs`}</title>
+        <meta
+          name="description"
+          content={`Learn more about ${frontmatter?.title}`}
+        />
+        <meta
+          property="og:title"
+          content={`${frontmatter?.title} - Twenty Six Hugs`}
+        />
+        <meta
+          property="og:description"
+          content={`${frontmatter?.description}`}
+        />
+        <meta
+          property="og:url"
+          content={`https://twentysixhugs.dev/articles/${frontmatter.slug}`}
+        />
+        <meta property="og:type" content="website" />
       </Head>
       <ArticleView source={source} frontmatter={frontmatter} />
     </>

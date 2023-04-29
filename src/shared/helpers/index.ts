@@ -1,2 +1,2 @@
 export * from "./getEllipsisStyles";
-export * from "./mapCMSResponse";
+export * from "./sortArticles";

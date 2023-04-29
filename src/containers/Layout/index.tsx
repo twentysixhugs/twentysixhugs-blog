@@ -1,4 +1,5 @@
 import { Header } from "@components";
+
 import * as Styles from "./styles";
 import { LayoutProps } from "./types";
 

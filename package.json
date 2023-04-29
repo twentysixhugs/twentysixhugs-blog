@@ -34,7 +34,8 @@
     "rehype-highlight": "6.0.0",
     "rehype-slug": "~5.1.0",
     "typescript": "5.0.4",
-    "typewriter-effect": "~2.19.0"
+    "typewriter-effect": "~2.19.0",
+    "vanilla-lazyload": "^17.8.3"
   },
   "devDependencies": {
     "eslint-import-resolver-typescript": "~3.5.5",

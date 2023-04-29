@@ -3,9 +3,9 @@ import { createTheme } from "@mui/material";
 export const theme = createTheme({
   breakpoints: {
     values: {
-      xs: 320,
-      sm: 768,
-      md: 1024,
+      xs: 400,
+      sm: 1050,
+      md: 1300,
       lg: 1600,
       xl: 1920,
     },
@@ -27,10 +27,14 @@ export const theme = createTheme({
   page: {
     padding: {
       lg: "200px",
+      md: "100px",
+      sm: "30px",
+      xs: "20px",
     },
     margin: {
       listHeading: "30px",
       top: "60px",
+      topMobile: "40px",
     },
   },
   typography: {
@@ -87,7 +91,7 @@ export const theme = createTheme({
   },
   components: {
     MuiCssBaseline: {
-      styleOverrides: () => ({
+      styleOverrides: (theme) => ({
         "::-webkit-scrollbar": {
           width: "10px",
         },
@@ -97,6 +101,9 @@ export const theme = createTheme({
         "::-webkit-scrollbar-thumb": {
           backgroundColor: "#5f5c7c",
           borderRadius: "12px",
+        },
+        body: {
+          background: `linear-gradient(180deg, ${theme.colors.background.first} 0%, ${theme.colors.background.second} 100%)`,
         },
       }),
     },

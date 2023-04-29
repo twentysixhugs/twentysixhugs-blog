@@ -1,4 +1,5 @@
 import { Box, keyframes, styled } from "@mui/material";
+
 import {
   APPEAR_KEYFRAMES_ADDITIONAL_DELAY,
   APPEAR_KEYFRAMES_LENGTH,

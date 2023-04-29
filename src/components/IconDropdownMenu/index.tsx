@@ -2,11 +2,13 @@ import React, { MouseEventHandler, useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { IconDropdownMenuProps } from "./types";
 import { Box, useTheme } from "@mui/material";
-import { useDynamicThemeContext } from "src/appConfig/context";
 import { produce } from "immer";
+
+import { useDynamicThemeContext } from "src/appConfig/context";
 import { theme as defaultTheme } from "src/appConfig";
+
+import { IconDropdownMenuProps } from "./types";
 
 export const IconDropdownMenu = ({
   icon,

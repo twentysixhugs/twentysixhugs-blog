@@ -17,10 +17,14 @@ declare module "@mui/material/styles" {
     page: {
       padding: {
         lg: string;
+        md: string;
+        sm: string;
+        xs: string;
       };
       margin: {
         listHeading: string;
         top: string;
+        topMobile: string;
       };
     };
   }
@@ -43,10 +47,14 @@ declare module "@mui/material/styles" {
     page: {
       padding: {
         lg: string;
+        md: string;
+        sm: string;
+        xs: string;
       };
       margin: {
         listHeading: string;
         top: string;
+        topMobile: string;
       };
     };
   }
