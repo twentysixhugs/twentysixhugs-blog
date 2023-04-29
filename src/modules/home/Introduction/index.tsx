@@ -35,12 +35,13 @@ export const Introduction = () => {
   return (
     <Styles.Introduction>
       <Styles.Title
-        variant="h1"
-        component="p"
+        variant="subtitle1"
         color={theme.colors.text.pageHeading}
         id="home-typewriter-message"
         mt={getPageMt()}
         fontSize={"50px"}
+        lineHeight="2rem"
+        fontWeight={600}
         sx={{
           ...(isLowerThan1800 && { minHeight: "130px", marginBottom: 0 }),
         }}

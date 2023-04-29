@@ -93,16 +93,19 @@ export const AboutDescription = () => {
           Contact me:
         </Typography>
         <Typography
+          onClick={() => handleCopy(EMAIL)}
           component="p"
-          sx={{ display: "flex", alignItems: "center", gap: "8px" }}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            cursor: "pointer",
+          }}
           variant={getContactDataVariant()}
           color={colors.text.heading}
         >
           {EMAIL}
-          <Icons.ContentCopyIcon
-            onClick={() => handleCopy(EMAIL)}
-            sx={{ cursor: "pointer" }}
-          />
+          <Icons.ContentCopyIcon sx={{ cursor: "pointer" }} />
         </Typography>
       </section>
       <section>
