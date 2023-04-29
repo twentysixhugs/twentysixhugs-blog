@@ -1,14 +1,14 @@
 import {
-  Box,
   Tooltip,
   Typography,
   TypographyVariant,
   useTheme,
 } from "@mui/material";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { ARTICLE_ROUTES, MAIN_ROUTES, routes } from "src/appConfig";
-import { useBreakpoints } from "@shared";
+import { useBreakpoints, useIsLoadingOnMount } from "@shared";
 
 import * as Styles from "./styles";
 
@@ -16,6 +16,10 @@ export const Header = () => {
   const { colors } = useTheme();
 
   const { isXs, isSm, isMd, isLg, isXl } = useBreakpoints();
+
+  const isLoading = useIsLoadingOnMount();
+
+  const router = useRouter();
 
   const getLinkVariant = (): TypographyVariant => {
     if (isXs || isSm) {
@@ -37,9 +41,14 @@ export const Header = () => {
     return "70px";
   };
 
+  const homeRoute = routes[MAIN_ROUTES.HOME].makePath();
+
   return (
-    <Styles.MainContainer>
-      <Styles.Nav>
+    <Styles.MainContainer aria-label="Page header">
+      <Styles.Nav
+        aria-busy={isLoading}
+        sx={{ ...(isLoading && { visibility: "hidden" }) }}
+      >
         <Styles.Ul>
           <Styles.Li>
             {(isXl || isLg || isMd) && (
@@ -50,12 +59,12 @@ export const Header = () => {
                 color={colors.text.primary}
                 className="link"
               >
-                <Link href={routes[MAIN_ROUTES.HOME].makePath()}>
-                  Twenty Six Hugs
-                </Link>
+                <Link href={homeRoute}>Twenty Six Hugs</Link>
               </Typography>
             )}
-            {(isSm || isXs) && <Styles.HomeIcon />}
+            {(isSm || isXs) && (
+              <Styles.HomeIcon onClick={() => router.push(homeRoute)} />
+            )}
           </Styles.Li>
           <Styles.Li sx={{ marginLeft: getLinkMl() }}>
             <Typography
@@ -83,18 +92,16 @@ export const Header = () => {
             </Tooltip>
           </Styles.Li>
           <Styles.Li sx={{ marginLeft: "auto" }}>
-            <Box>
-              <Typography
-                component="span"
-                className="link"
-                variant={getLinkVariant()}
-                color={colors.text.primary}
-              >
-                <Link href={routes[MAIN_ROUTES.ABOUT].makePath()}>
-                  {isXs || isSm ? "About" : "About me"}
-                </Link>
-              </Typography>
-            </Box>
+            <Typography
+              component="span"
+              className="link"
+              variant={getLinkVariant()}
+              color={colors.text.primary}
+            >
+              <Link href={routes[MAIN_ROUTES.ABOUT].makePath()}>
+                {isXs || isSm ? "About" : "About me"}
+              </Link>
+            </Typography>
           </Styles.Li>
         </Styles.Ul>
       </Styles.Nav>

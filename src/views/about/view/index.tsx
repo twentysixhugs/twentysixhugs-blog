@@ -5,7 +5,7 @@ import { Layout } from "@containers";
 import { AboutMe } from "@modules";
 import { useBreakpoints } from "@shared";
 
-export const AboutView = () => {
+export const AboutView = ({ avatarSrc }: { avatarSrc: string }) => {
   const { isSm, isXs } = useBreakpoints();
 
   const getPageMt = () => {
@@ -24,7 +24,7 @@ export const AboutView = () => {
         justifyContent="center"
         mt={getPageMt()}
       >
-        <AboutMe />
+        <AboutMe avatarSrc={avatarSrc} />
       </Box>
     </Layout>
   );

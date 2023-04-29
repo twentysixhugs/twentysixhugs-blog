@@ -36,6 +36,7 @@ export const MainContainer = styled("header")({
 
 export const HomeIcon = styled(HomeIconComponent)({
   color: theme.colors.text.primary,
+  cursor: "pointer",
 });
 
 export const Nav = styled("nav")({
