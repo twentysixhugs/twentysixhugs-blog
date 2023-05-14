@@ -1,5 +1,3 @@
 {
-  "list": [
-    { "name": "english", "label": "English" },
-  ]
+  "list": [{ "name": "english", "label": "English" }]
 }
