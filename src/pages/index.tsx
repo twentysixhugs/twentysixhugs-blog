@@ -32,6 +32,7 @@ const Home = ({ articles }: { articles: ArticleListItem[] }) => {
         />
         <meta property="og:url" content={process.env.NEXT_PUBLIC_DOMAIN_NAME} />
         <meta property="og:type" content="website" />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}`} />
       </Head>
       <HomeView articles={articles} />
     </>

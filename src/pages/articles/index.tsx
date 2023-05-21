@@ -41,6 +41,10 @@ const Articles = ({
           content={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/articles`}
         />
         <meta property="og:type" content="website" />
+        <link
+          rel="canonical"
+          href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/articles`}
+        />
       </Head>
 
       <ArticleListView categories={categories} articles={articles} />

@@ -33,6 +33,10 @@ const About = ({ avatarSrc }: { avatarSrc: string }) => {
           property="og:url"
           content={`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/about`}
         />
+        <link
+          rel="canonical"
+          href={`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/about`}
+        />
         <meta property="og:type" content="website" />
       </Head>
       <AboutView avatarSrc={avatarSrc} />
