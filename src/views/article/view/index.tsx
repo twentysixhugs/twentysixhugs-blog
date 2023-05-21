@@ -14,7 +14,9 @@ export const ArticleView = ({ source, frontmatter }: ArticleViewProps) => {
   const { isSm, isXs } = useBreakpoints();
 
   useEffect(() => {
-    const links = document.querySelectorAll("a");
+    const links = document.querySelectorAll(
+      ".article-main-container a"
+    ) as unknown as HTMLLinkElement[];
 
     links.forEach((link) => {
       link.target = "_blank";
@@ -32,7 +34,7 @@ export const ArticleView = ({ source, frontmatter }: ArticleViewProps) => {
 
   return (
     <Layout innerContainerSx={{ paddingInline: "23vw" }}>
-      <Styles.MainContainer>
+      <Styles.MainContainer className="article-main-container">
         <Box mt={getPageMt()}>
           <ArticleHeading
             title={frontmatter.title}
