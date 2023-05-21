@@ -20,7 +20,7 @@ const Home = ({ articles }: { articles: ArticleListItem[] }) => {
         <title>Twenty Six Hugs | Web Development Blog</title>
         <meta
           name="description"
-          content="A blog for developers. Write about web development, lifelong learning and growth"
+          content="A blog for developers. Write about web development, life improvement and achieving your goals"
         />
         <meta
           property="og:title"
@@ -28,9 +28,9 @@ const Home = ({ articles }: { articles: ArticleListItem[] }) => {
         />
         <meta
           property="og:description"
-          content="A blog for developers. Write about software development, lifelong learning and growth"
+          content="A blog for developers. Write about software development, life improvement and achieving your goals"
         />
-        <meta property="og:url" content={`https://twentysixhugs.com`} />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_DOMAIN_NAME} />
         <meta property="og:type" content="website" />
       </Head>
       <HomeView articles={articles} />

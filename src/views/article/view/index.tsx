@@ -1,16 +1,26 @@
 import { Box } from "@mui/material";
 import { MDXRemote } from "next-mdx-remote";
+import { useEffect } from "react";
 
 import { Layout } from "@containers";
 import { useBreakpoints } from "@shared";
 import { theme } from "@app";
-import { ArticleHeading, Code } from "@components";
+import { ArticleHeading, Code, PostCTA } from "@components";
 
 import { ArticleViewProps } from "./types";
 import * as Styles from "./styles";
 
 export const ArticleView = ({ source, frontmatter }: ArticleViewProps) => {
   const { isSm, isXs } = useBreakpoints();
+
+  useEffect(() => {
+    const links = document.querySelectorAll("a");
+
+    links.forEach((link) => {
+      link.target = "_blank";
+      link.rel = "noreferrer noopener";
+    });
+  }, []);
 
   const getPageMt = () => {
     if (isXs || isSm) {
@@ -32,6 +42,9 @@ export const ArticleView = ({ source, frontmatter }: ArticleViewProps) => {
           <Styles.Content>
             <MDXRemote {...source} components={{ code: Code }} />
           </Styles.Content>
+          <Box mt="30px">
+            <PostCTA />
+          </Box>
         </Box>
       </Styles.MainContainer>
     </Layout>

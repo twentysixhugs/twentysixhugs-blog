@@ -66,9 +66,13 @@ const ArticlePage = ({ source, frontmatter }: RenderArticleMeta) => {
         />
         <meta
           property="og:url"
-          content={`https://twentysixhugs.com/articles/${frontmatter.slug}`}
+          content={`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/articles/${frontmatter.slug}`}
         />
         <meta property="og:type" content="website" />
+        <link
+          rel="canonical"
+          href={`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/articles/${frontmatter.slug}`}
+        />
       </Head>
       <ArticleView source={source} frontmatter={frontmatter} />
     </>

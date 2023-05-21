@@ -29,16 +29,16 @@ const Articles = ({
         <title>Articles | Twenty Six Hugs</title>
         <meta
           name="description"
-          content={`Explore my collection of articles on web development and growing as a developer. I cover a range of topics to help you improve your skills and achieve your career goals.`}
+          content={`Explore my collection of articles on web development and life improvement where I share my personal experience. I cover a range of topics to help you improve your skills and achieve your goals.`}
         />
         <meta property="og:title" content={`Articles - Twenty Six Hugs`} />
         <meta
           property="og:description"
-          content={`Explore my collection of articles on web development and growing as a developer. I cover a range of topics to help you improve your skills and achieve your career goals.`}
+          content={`Explore my collection of articles on web development and life improvement where I share my personal experience. I cover a range of topics to help you improve your skills and achieve your goals.`}
         />
         <meta
           property="og:url"
-          content={`https://twentysixhugs.com/articles`}
+          content={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/articles`}
         />
         <meta property="og:type" content="website" />
       </Head>
