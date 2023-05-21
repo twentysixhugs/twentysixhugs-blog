@@ -34,6 +34,19 @@ export const Content = styled(Box)({
       lineHeight: "1.6rem",
     },
   },
+  "ul, ol, li": {
+    fontSize: theme.typography.subtitle1.fontSize,
+    lineHeight: "2.2rem",
+    opacity: 0.95,
+    color: "#e8e6e3",
+  },
+  strong: { fontWeight: 700 },
+  ul: { paddingLeft: "22px" },
+  ol: { paddingLeft: "24px" },
+  "li p": { margin: 0 },
+  a: {
+    color: theme.colors.text.primary,
+  },
   color: "#e8e6e3",
   img: {
     maxWidth: `calc(100vw - ${theme.page.padding.lg} - ${theme.page.padding.lg})`,

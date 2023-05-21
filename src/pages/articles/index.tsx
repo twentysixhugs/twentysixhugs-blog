@@ -38,7 +38,7 @@ const Articles = ({
         />
         <meta
           property="og:url"
-          content={`https://twentysixhugs.dev/articles`}
+          content={`https://twentysixhugs.com/articles`}
         />
         <meta property="og:type" content="website" />
       </Head>

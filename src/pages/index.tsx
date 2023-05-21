@@ -30,7 +30,7 @@ const Home = ({ articles }: { articles: ArticleListItem[] }) => {
           property="og:description"
           content="A blog for developers. Write about software development, lifelong learning and growth"
         />
-        <meta property="og:url" content={`https://twentysixhugs.dev`} />
+        <meta property="og:url" content={`https://twentysixhugs.com`} />
         <meta property="og:type" content="website" />
       </Head>
       <HomeView articles={articles} />

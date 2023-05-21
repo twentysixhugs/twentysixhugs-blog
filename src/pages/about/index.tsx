@@ -29,7 +29,7 @@ const About = ({ avatarSrc }: { avatarSrc: string }) => {
           property="og:description"
           content="The story behind why I write"
         />
-        <meta property="og:url" content="https://twentysixhugs.dev/about" />
+        <meta property="og:url" content="https://twentysixhugs.com/about" />
         <meta property="og:type" content="website" />
       </Head>
       <AboutView avatarSrc={avatarSrc} />
