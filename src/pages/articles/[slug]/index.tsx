@@ -74,6 +74,7 @@ const ArticlePage = ({ source, frontmatter }: RenderArticleMeta) => {
           href={`${process.env.NEXT_PUBLIC_DOMAIN_NAME}/articles/${frontmatter.slug}`}
         />
       </Head>
+
       <ArticleView source={source} frontmatter={frontmatter} />
     </>
   );

@@ -28,6 +28,7 @@
     "next-mdx-remote": "~4.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-modal-image": "^2.6.0",
     "reading-time": "~1.5.0",
     "rehype-autolink-headings": "~6.1.1",
     "rehype-code-titles": "~1.2.0",
@@ -38,8 +39,11 @@
     "vanilla-lazyload": "^17.8.3"
   },
   "devDependencies": {
+    "@types/react-modal-image": "^2.6.1",
     "eslint-import-resolver-typescript": "~3.5.5",
     "eslint-plugin-react-hooks": "~4.6.0",
+    "i": "^0.3.7",
+    "npm": "^10.2.0",
     "prettier": "2.8.7"
   }
 }

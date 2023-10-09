@@ -8,3 +8,4 @@ export * from "./AboutPicture";
 export * from "./ArticleHeading";
 export * from "./Code";
 export * from "./CTA";
+export * from "./ArticleImage";

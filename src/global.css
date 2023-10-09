@@ -3,3 +3,8 @@ body {
     padding: 0;
     margin: 0;
 }
+
+
+.__react_modal_image__caption {
+    visibility: hidden;
+}
