@@ -10,3 +10,7 @@ export const sortArticles = (articles: ArticleListItem[]) => {
     })
     .reverse();
 };
+
+export const sortFeatured = (articles: ArticleListItem[]) => {
+  return articles.sort((a, b) => a.featuredIndex - b.featuredIndex);
+};

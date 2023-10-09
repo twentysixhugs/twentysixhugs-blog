@@ -6,7 +6,7 @@ export type ArticleMdxData = {
   publishedAt: string;
   slug: string;
   readingTime: string;
-  featured: boolean;
+  featuredIndex: boolean;
   category: string;
 };
 
@@ -14,7 +14,7 @@ export type ArticleListItem = {
   title: string;
   description: string;
   slug: string;
-  featured: boolean;
+  featuredIndex: number;
   readingTime: string;
   publishedAt: string;
   category: string;

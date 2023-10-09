@@ -58,6 +58,6 @@ export async function getAllArticles() {
 
 export async function getFeaturedArticles() {
   const articles = await getAllArticles();
-  const res = articles.filter(({ featured }) => !!featured);
+  const res = articles.filter(({ featuredIndex }) => !!featuredIndex);
   return res;
 }

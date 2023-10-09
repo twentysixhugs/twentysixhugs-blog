@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { ArticleListItem, sortArticles } from "@shared";
+import { ArticleListItem, sortFeatured } from "@shared";
 import { getFeaturedArticles } from "@utils";
 import { HomeView } from "@views/home";
 
@@ -9,7 +9,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      articles: sortArticles(articles),
+      articles: sortFeatured(articles),
     },
   };
 }
