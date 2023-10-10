@@ -6,6 +6,8 @@ featuredIndex: 2
 category: productivity
 ---
 
+_Tired of learning and then forgetting? Here's what to do:_
+
 Time to write about it. In particular, today we will consider two ways of effective learning: **Spaced Repetition** and **Active Recall** via Google spreadsheets.
 
 The first one is suitable for studying languages and medicine, the second one is for preparing for coding interviews and exams. Today we'll cover the basic needs of developers and students.
@@ -14,30 +16,30 @@ Let's start with the first one.
 
 ## Spaced repetition
 
-Once upon a time, there was a guy called Ebbinghaus. He researched memory, and at some point he got an epiphany: he realized that if we learn something, and then repeat it tomorrow, 3 days after tomorrow, a week after these three days, etc. (the numbers are not strict), then after each repetition our memory will remember the material for a decent amount of time longer. So, if you learn an English word on January 10, you will repeat it on January 11, then on 13, 18, 30, and then on February 20, March 30. Then after 3 months, after 6 months, after a year. Do you see how the time grows before the next repetition after each memory refresh? It is the spaced repetition technique. You simply repeat at an increasing interval. That's it.
+Once upon a time, there was a guy called Ebbinghaus. He researched memory, and at some point he got an idea: he realized that if we learn something, and then repeat it tomorrow, 3 days after tomorrow, a week after these three days, etc. (the numbers are not strict), then after each repetition our memory will remember the material for a decent amount of time longer. So, if you learn an English word on January 10, you will repeat it on January 11, then on 13, 18, 30, and then on February 20, March 30. Then after 3 months, after 6 months, after a year. Do you see how the time grows before the next repetition after each memory refresh? It is the spaced repetition technique. You simply repeat at an increasing interval. That's it.
 
-It is very painful to do this manually, trying to figure out what to repeat every day (imagine, it's day 21, you learn 15 English words a day and are trying to remember what you have to repeat). So to address this, there are two programs that automate it. **Anki** and **WordUp**. The first one is suitable for everything, even if you learn ancient Chinese, the second one is purely for English. I wrote about them in [this post](https://twentysixhugs.com/articles/articles/how-to-learn-english-to-c1-level). It's about how to learn English to C1 level. If you haven't read it and you need help with learning the language, I advise you to read it after this one.
+It is very painful to do this manually, trying to figure out what to repeat every day (imagine, it's day 21, you learn 15 English words a day and are trying to remember what you have to repeat). So to address this, there are two programs that automate it. **[https://apps.ankiweb.net/](Anki)** and **[https://www.wordupapp.co/](WordUp)**. The first one is suitable for everything, even if you learn ancient Chinese, the second one is purely for English. I wrote about them in [this post](https://twentysixhugs.com/articles/articles/how-to-learn-english-to-c1-level). It's about how to learn English to C1 level. If you haven't read it and you need help with learning the language, I advise you to read it after this one.
 
 ## Active Recall with Google spreadsheets
 
-This method is more suitable for the short term - **2–3 weeks**. That's the time when your knowledge is the most powerful when using the method. For example, you are preparing for a coding interview / college exam and you need to learn or refresh some knowledge.
+This method is more suitable for the short term - **2–3 weeks**. That's the time when your knowledge is the most powerful when using the method. For example, you are preparing for a coding interview / college exam and you need to learn or repeat something.
 Let's look at an example of how it works.
 
 Create a Google spreadsheet. Below you can see what it looks like.
-The first column is a question. For example, let our question be "The first principle of SOLID".
+The first column is a question. For example, let our question be 'What is “social justice”?'.
 The first row is the date. Here you have to put down the date from, say, today, to about 10 days ahead. If you have a lot of questions, then put more days.
 
 ![What the spreadsheet looks like. Questions in the first column, dates in the first row. They overlap.](https://i.imgur.com/nwoK08H.png)
 
-**How to use it**. Ask yourself the question. 'What is the first principle of SOLID?' in our case. Then answer it. Since you are answering it for the first time, we will consider it a "first contact" /"memorization" / you get it. Paint blue the intersection between today's date and this question.
+**How to use it**. Ask yourself the question. 'What is “social justice”?' in our case. Then answer it. Since you are answering it for the first time, we will consider it a "first contact" /"memorization" / you get it. Paint blue the intersection between today's date and this question.
 
-Let's suppose you created two more questions. "Lifecycle methods in React" and "How list virtualization works". You also answer them out loud, and paint the rectangle blue.
+Let's suppose you created two more questions. "Why do revolutions happen?" and "What is a variable in programming?". You also answer them out loud, and paint the rectangle blue.
 
 That's all. You _got familiar_ with the information.
 
 ## Next day.
 
-You sit down looking at the spreadsheet and start answering each question. For the first question about SOLID, you answered more or less alright, but not so well. Paint yellow the cell in the spreadsheet. You answered the second one about Lifecycle methods really well, paint it green. And the question about virtualization went really bad, you've forgotten what it is at all. Paint it red.
+You sit down looking at the spreadsheet and start answering each question. For the first question about social justice, you answered more or less alright, but not so well. Paint yellow the cell in the spreadsheet. You answered the second one about revolutions really well, paint it green. And the question about variable in programming went really badly, you've forgotten what it is at all. Paint it red.
 If you have more questions you didn't touch yesterday, you can learn them now and paint them in blue. It is optimal to learn _5–10_ questions a day.
 That's it for today. You repeat and learn a couple of new ones. Let's move on.
 
@@ -48,7 +50,7 @@ And that's where the most interesting thing comes.
 
 ## Fourth day.
 
-Notice this: we answered "good/green" twice in a row (for Lifecycle methods). So, we can be sure that we've kinda learned it so far, and today we're free to skip it.. We repeat only those where the color sequence is "yellow - green", "yellow - yellow", "yellow-red", and so on. **That is, we always repeat everything that is not "green - green" and connects with the current day**
+Notice this: we answered "good/green" twice in a row (for revolutions). So, we can be sure that we've kinda learned it so far, and today we're free to skip it.. We repeat only those where the color sequence is "yellow - green", "yellow - yellow", "yellow-red", and so on. **That is, we always repeat everything that is not "green - green" and connects with the current day**
 
 ## Day 5
 
