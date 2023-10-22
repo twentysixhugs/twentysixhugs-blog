@@ -1,7 +1,7 @@
 export const INTRODUCTION_HEADING =
   "Embrace lifelong learning and growth as a developer";
 export const INTRODUCTION_DESCRIPTION =
-  "Welcome to my blog, where I explore the art of self-improvement as a developer and in all aspects of life. Join me on a journey of personal growth and learn how to reach your full potential as a developer and a human being.";
+  "Welcome to my blog, where I explore the art of self-improvement as a developer and in all aspects of life. I share my experience with things so many people ask me about.";
 
 export const INTRODUCTION_DESCRIPTION_MOBILE =
   "Welcome to my blog, where I explore the art of self-improvement as a developer and in all aspects of life.";
